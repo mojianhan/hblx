@@ -1,0 +1,334 @@
+$base = 1 / 750 * 100vw
+body
+  height 100%
+  overflow auto
+    -webkit-overflow-scrolling: touch;
+.main-index-container
+    height 100%
+    background url('../images/game/main_bg.png') no-repeat center/cover
+    background-size 100% 100%
+    position relative
+    overflow hidden
+    .header
+        display flex
+        margin 0 30 * $base
+        margin-top 40 * $base
+        background-color #ae1608
+        border-radius 60 * $base
+        p
+            width 230 * $base
+            text-align center
+            height 60 * $base
+            line-height 60 * $base
+            font-size 30 * $base
+            color #fdcac0
+            position relative
+            &:after
+                content ''
+                display block
+                height 30 * $base
+                width 2 * $base
+                background-color #ec5131
+                position absolute
+                top 15 * $base
+                right 0
+            &:last-child
+                &:after
+                    display none
+
+    .qr-code-container
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background rgba(0, 0, 0, 0.8)
+        display flex
+        justify-content center
+        align-items center
+        z-index 888
+        .qr-code-img
+            height 300 * $base
+            width 300 * $base
+
+    .buttom-box
+        width 100%
+        position absolute
+        bottom 54 * $base
+        left 0
+        .part-in
+            width 100%
+            text-align center
+            font-size 32 * $base
+            color #fff
+            margin-bottom 70 * $base
+            .participate-number
+              margin 0 20 * $base
+        .to-game
+            display block
+            height 120 * $base
+            margin 0 30 * $base
+            text-align center
+            line-height 120 * $base
+            font-size 40 * $base
+            font-weight bold
+            color #ff4b0a
+            background url('../images/game/button1.png') no-repeat center/cover
+            background-size 100% 100%
+
+    //关注我们按钮
+    .follow
+        display block
+        width 244 * $base
+        height 80 * $base
+        line-height 80 * $base
+        font-size 40 * $base
+        color #ff4b0a
+        font-weight bold
+        margin 0 auto
+        text-align center
+        background url('../images/game/button2.png') no-repeat center/cover
+        background-size 100% 100%
+    // 排行榜
+    .ranking-list-container
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 777
+        background url('../images/game/paihangb.png') no-repeat center/cover
+        background-size 100% 100%
+        overflow hidden
+        .your-ranking
+            margin 160*$base 0 22*$base 50*$base
+            color #fddc1a
+            font-size 32 * $base
+
+        .list-container
+            margin 20 * $base 30 * $base
+            height 700 * $base
+            font-size 30 * $base
+            color #fff
+            border 2px solid #FFF
+            border-radius 10 * $base
+            overflow hidden
+            .list-head
+                display flex
+                justify-content space-between
+                p
+                    flex 1
+                    text-align center
+                    height 100 * $base
+                    line-height 100 * $base
+
+            .list-uls
+                height 600 * $base
+                overflow-y auto
+                li
+                    list-style none
+                    text-decoration none
+                    display flex
+                    height 100 * $base
+                    line-height 100 * $base
+                    justify-content space-between
+                    p
+                        flex 1
+                        text-align center
+                        &:nth-child(3)
+                            overflow hidden
+                            text-overflow ellipsis
+                            white-space nowrap
+                    .img-mini
+                        flex 1
+                        display flex
+                        align-items center
+                        img
+                            display block
+                            margin 0 auto
+                            height 70 * $base
+                            border-radius 70 * $base
+
+                    &:nth-child(2n + 1)
+                        background-color #9B1B05
+
+
+    //统一alert样式
+    .alert-main-container
+        z-index 887
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background-color rgba(0,0,0, .8)
+        overflow hidden
+        .alert-header
+            margin-top 80 * $base
+            font-size 42 * $base
+            color #ffffff
+            text-align center
+            margin-bottom 30 * $base
+            position relative
+            &:before
+                content ''
+                display block
+                position absolute
+                top 40%
+                left 150 * $base
+                height 15 * $base
+                width 130 * $base
+                transform: rotate(180deg)
+                background url('../images/game/line.png') no-repeat
+                background-size 100% 100%
+            &:after
+                content ''
+                display block
+                position absolute
+                top 40%
+                right 155 * $base
+                height 15 * $base
+                width 130 * $base
+                transform: rotate(360deg)
+                background url('../images/game/line.png') no-repeat
+                background-size 100% 100%
+        .alert-list-container
+            height 720 * $base
+            margin 0 auto
+            margin 0 50 * $base
+            border-radius 50 * $base
+            font-size 30 * $base
+            color #a07858
+            padding 30 * $base
+            background -webkit-linear-gradient(#FF5D11, #D0160F)
+            margin-bottom 30 * $base
+            position relative
+            .alert-close
+                position absolute
+                top -150 * $base
+                right 0
+                height 70 * $base
+                width 70 * $base
+                background url('../images/game/close.png') no-repeat
+                background-size 100% 100%
+                &:after
+                    content ''
+                    display block
+                    height 83 * $base
+                    width 1px
+                    background-color #a07858
+                    position absolute
+                    bottom -83 * $base
+                    left 50%
+            .alert-uls-container
+                height 660 * $base
+                border-radius 50 * $base
+                background-color #FFF8E5
+                padding 30 * $base 40 * $base
+    // 我的奖品
+    .my-prize-container
+        .prize-list-container
+            .prize-uls-container
+                background url('../images/game/image1.png') no-repeat
+                background-color #FFF8E5
+                background-size 100%
+                background-position 0 100%
+                .prize-uls
+                    height 600 * $base
+                    overflow hidden
+                    overflow-y auto
+                    li
+                        list-style none
+                        display flex
+                        justify-content space-between
+                        align-items center
+                        margin-bottom 44 * $base
+                        p
+                            flex 1
+                            display flex
+                            align-items center
+                            &:first-child
+                                font-weight bold
+                                span
+                                    &:last-child
+                                        font-weight normal
+                                        font-size 24 * $base
+                                        padding 1 * $base 4 *$base
+                                        border 1px solid #a07858
+                                        border-radius 8 * $base
+                                .prize-name
+                                    max-width 200 * $base
+                                    overflow hidden
+                                    margin 0 10 * $base
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 2;
+                                    overflow: hidden;
+
+                            &:last-child
+                                font-size 24 * $base
+                // 无中奖记录
+                .no-prize-container
+                    text-align center
+                    padding-top 100 * $base
+                    img
+                        display block
+                        margin 0 auto
+                    .no-prize-header
+                        height 26 * $base
+                        width 70 * $base
+                        margin-bottom 30 * $base
+                    p
+                        color #be7d4b
+                    .no-prize-footer
+                        height 364 * $base
+                        width 388 * $base
+    // 游戏规则
+    .game-rule-container
+        .game-rule-list-container
+            .game-rule-uls-container
+                padding 20 * $base 30 * $base
+                overflow hidden
+                overflow-y auto
+                .game-items
+                    color #be7d43
+                    font-size 30 * $base
+                    .items-head
+                        font-weight bold
+                    .prize-list-detail
+                        p
+                          display flex
+                          flex-wrap wrap
+
+
+    //提示
+    .error-alert-container
+        .error-list-container
+            height 500 * $base
+            .alert-uls-container
+                height 430 * $base
+                display flex
+                text-align center
+                align-items center
+                justify-content center
+                font-size 32 * $base
+                color #be7d43
+                font-weight 500
+        .error-alert-footer
+            margin-top 70 * $base
+            display flex
+
+    //分享
+    .share-container
+        display flex
+        align-items center
+        justify-content center
+        background url('../images/game/share.png') no-repeat
+        background-color rgba(0, 0, 0, 0.8)
+        background-size 50%
+        background-position 95% 0
+        z-index 889
+        img
+         display block
+         height 80 * $base
+         width 294 * $base

@@ -1,0 +1,48 @@
+{
+  "name": "h5-mobile-scaffold",
+  "version": "1.1.0",
+  "description": "这是一个简单、实用、基础的 H5 移动端开发脚手架。",
+  "scripts": {
+    "start": "supervisor -w tasks -x gulp server",
+    "build": "rimraf ../commodity/web/wx-mobile && gulp",
+    "test": "eslint src/**/*.es"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cntanglijun/h5-mobile-scaffold.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cntanglijun/h5-mobile-scaffold/issues"
+  },
+  "homepage": "https://github.com/cntanglijun/h5-mobile-scaffold#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "browser-sync": "^2.23.7",
+    "eslint": "^4.19.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-cli": "^2.0.1",
+    "gulp-html": "^0.4.7",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "nib": "^1.1.2",
+    "pug": "^2.0.3",
+    "pump": "^3.0.0",
+    "require-dir": "^1.0.0",
+    "requirejs": "^2.3.5",
+    "rimraf": "^2.6.2",
+    "stylus": "^0.54.5",
+    "supervisor": "^0.12.0"
+  }
+}

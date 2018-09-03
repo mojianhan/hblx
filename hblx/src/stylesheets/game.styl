@@ -1,0 +1,330 @@
+$base = 1 / 750 * 100vw
+body
+    overflow auto
+    -webkit-overflow-scrolling: touch;
+
+.main-container
+    height 100vh
+    background url('../images/game/bg_bg.png') no-repeat center/cover
+    background-size 100% 100%
+    position relative
+    overflow hidden
+    .to-index
+      color #fff
+      display block
+      text-align center
+      font-size 34 * $base
+      margin-top 20 * $base
+    // 头部
+    .head
+        z-index 88
+        padding-top 30 * $base
+        width 100%
+        position absolute
+        top 0
+        left 0
+        display flex
+        justify-content space-between
+        .user-info
+            img
+                display block
+                height 100 * $base
+                width 100 * $base
+                border 5 * $base solid #fda719
+                margin-left 30 * $base
+                border-radius 50 * $base
+            .score
+                height 90 * $base
+                width 180 * $base
+                background url('../images/game/score.png') no-repeat center/cover
+                color #ffffff
+                position relative
+                span
+                    position absolute
+                    top 15 * $base
+                    right 10 * $base
+        .time
+            flex 1
+            text-align center
+            color #ffffff
+            span
+                text-shadow 1px 2px 1px rgba(68, 34, 4, 0.4)
+        .music
+            width 180 * $base
+            height 100 * $base
+            background url('../images/game/music.png') no-repeat center
+            background-size 47% 80%
+        .music-disable
+            background url('../images/game/music_disable.png') no-repeat center
+            background-size 47% 80%
+
+    // 物品降落区域
+    .body-bg
+        height 100%
+        padding-top 240 * $base
+        position relative
+        span
+            display block
+            height 100 * $base
+            width 100 * $base
+            position absolute
+        .money
+            background url('../images/game/hongbao.png') no-repeat
+            background-size 100% 100%
+        .money-db
+            background url('../images/game/hongbao_db.png') no-repeat
+            background-size 100% 100%
+        .bomb
+            background url('../images/game/bomb.png') no-repeat
+            background-size 100% 100%
+    // 人物
+    .puppet
+        height  174 * $base
+        width 100 * $base
+        position absolute
+        bottom 60 * $base
+        left 38%
+        background url('../images/game/people.png') no-repeat center/cover
+        background-size 100% 100%
+    .puppet-bomb
+        background url('../images/game/people2.png') no-repeat center/cover
+        background-size 100% 100%
+    .get-score
+        &:after
+            display block
+            content ''
+            height  50 * $base
+            width 80 * $base
+            position absolute
+            top -20 * $base
+            right -80 * $base
+    .get-score5
+        &:after
+            background url('../images/game/score5.png') no-repeat center/cover
+            background-size 100% 100%
+
+    .get-score10
+            &:after
+                background url('../images/game/score10.png') no-repeat center/cover
+                background-size 100% 100%
+
+    .lose-score20
+        &:after
+            background url('../images/game/Dscore20.png') no-repeat center/cover
+            background-size 100% 100%
+        &:before
+            content: ''
+            display block
+            height 100 * $base
+            width 100 * $base
+            position absolute
+            top -50 * $base
+            left 0
+            background url('../images/game/air.png') no-repeat center/cover
+            background-size 100% 100%
+
+    // game-over-alert
+     //关注我们按钮
+    .follow
+        display block
+        width 244 * $base
+        height 80 * $base
+        line-height 80 * $base
+        font-size 40 * $base
+        color #ff4b0a
+        font-weight bold
+        margin 0 auto
+        text-align center
+        background url('../images/game/button2.png') no-repeat center/cover
+        background-size 100% 100%
+    .game-over-alert-container
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        z-index 777
+        background-color rgba(0,0,0, .8)
+        overflow hidden
+        .game-over-alert-list-container
+            height 700 * $base
+            margin 0 auto
+            margin 150 * $base 0
+            border-radius 50 * $base
+            font-size 30 * $base
+            color #a07858
+            background url('../images/game/image_tiaozcg.png') no-repeat
+            background-size 100% 100%
+            margin-bottom 30 * $base
+            position relative
+            .game-over-uls-container
+                width 100%
+                text-align center
+                padding-top 340 * $base
+                font-weight 600
+                p
+                    text-align left
+                    padding-left 180 * $base
+                    font-size 26 * $base
+                    &:first-child
+                        font-size 32 * $base
+                        margin-bottom 20 * $base
+                    &:last-child
+                        position absolute
+                        bottom 30 * $base
+                        left 0
+        //挑战失败
+        .failed-alert-container
+            background url('../images/game/image_tiaozsb.png') no-repeat
+            background-size 100% 100%
+            .game-over-uls-container
+                padding-top 320 * $base
+                p
+                  max-width 140 * $base
+                    &:first-child
+                        font-size 32 * $base
+                        margin-bottom 0
+                    &:nth-child(2)
+                        color #eda96e
+                        font-weight normal
+                        margin-bottom 20 * $base
+        .game-over-alert-footer
+            margin-top 50 * $base
+            display flex
+        //提示
+      .error-alert-container
+        z-index 887
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background-color rgba(0,0,0, .8)
+        overflow hidden
+        .alert-header
+            margin-top 80 * $base
+            font-size 42 * $base
+            color #ffffff
+            text-align center
+            margin-bottom 30 * $base
+            position relative
+            &:before
+                content ''
+                display block
+                position absolute
+                top 40%
+                left 150 * $base
+                height 15 * $base
+                width 130 * $base
+                transform: rotate(180deg)
+                background url('../images/game/line.png') no-repeat
+                background-size 100% 100%
+            &:after
+                content ''
+                display block
+                position absolute
+                top 40%
+                right 155 * $base
+                height 15 * $base
+                width 130 * $base
+                transform: rotate(360deg)
+                background url('../images/game/line.png') no-repeat
+                background-size 100% 100%
+
+        .error-list-container
+            height 500 * $base
+            margin 0 auto
+            margin 0 50 * $base
+            border-radius 50 * $base
+            font-size 30 * $base
+            color #a07858
+            text-align center
+            padding 30 * $base
+            background -webkit-linear-gradient(#FF5D11, #D0160F)
+            margin-bottom 30 * $base
+            position relative
+            .alert-close
+                position absolute
+                top -150 * $base
+                right 0
+                height 70 * $base
+                width 70 * $base
+                background url('../images/game/close.png') no-repeat
+                background-size 100% 100%
+                &:after
+                    content ''
+                    display block
+                    height 83 * $base
+                    width 1px
+                    background-color #a07858
+                    position absolute
+                    bottom -83 * $base
+                    left 50%
+            .error-alert-uls-container
+                height 430 * $base
+                border-radius 50 * $base
+                background-color #FFF8E5
+                padding 30 * $base 40 * $base
+                display flex
+                text-align center
+                align-items center
+      .error-alert-container
+        .error-list-container
+            height 500 * $base
+            .error-alert-uls-container
+                height 430 * $base
+                display flex
+                text-align center
+                align-items center
+                justify-content center
+                font-size 32 * $base
+                color #be7d43
+                font-weight 500
+        .error-alert-footer
+            margin-top 70 * $base
+            display flex
+
+        //分享
+    .share-container
+        z-index 888
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        overflow hidden
+        display flex
+        align-items center
+        justify-content center
+        background url('../images/game/share.png') no-repeat
+        background-color rgba(0, 0, 0, 0.8)
+        background-size 50%
+        background-position 95% 0
+        img
+          display block
+          height 80 * $base
+          width 294 * $base
+
+    .qr-code-container
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background rgba(0, 0, 0, 0.8)
+        display flex
+        justify-content center
+        align-items center
+        z-index 889
+        .qr-code-img
+            height 300 * $base
+            width 300 * $base
+
+// 兼容Phone5
+@media (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)
+    .main-container
+        .head
+            .user-info
+                .score
+                    span
+                        top 10 * $base

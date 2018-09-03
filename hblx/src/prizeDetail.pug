@@ -1,0 +1,58 @@
+extends template/layout
+block customer-title
+  - var title = '奖品详情'
+block customer-meta
+  link(href="./stylesheets/prizeDetail.css" rel="stylesheet")
+
+block customer-content
+        <div class="prizeDetail-main-container">
+            <div class="head">
+                <p class="prize-name"></p>
+                <p class="prize-status"></p>
+                <a href="./" class="close"></a>
+            </div>
+
+            <div class="prize-ticket-info-container">
+                <p class="ticket-head">兑奖券详情</p>
+
+                <div class="ticket-info">
+                    <p>
+                        <span>兑奖码</span>
+                        <span class="prize-exchange-code"></span>
+                    </p>
+                    <p>
+                        <span>兑奖期限</span>
+                        <span class="prize-deadline"></span>
+                    </p>
+                    <p>
+                        <span>兑奖地址</span>
+                        <span class="awards_address"></span>
+                    </p>
+                    <p>
+                        <span>门店电话</span>
+                        <span class="store-hotline"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="exchange-now">立即兑换</div>
+
+            <div class="exchange-code-container hidden">
+                <div class="exchange-code-info">
+                    <div class="exchange-code-head">
+                        <p>请联系核销员扫码核销</p>
+                        <p class="close-exchange-code"></p>
+                    </div>
+                    <div class="code-container">
+                        <!-- <img class="exchange-code" src="./images/game/code.png" alt=""> -->
+                        <p class="code-num"></p>
+                        <p>凭该券号至兑奖地址兑奖</p>
+                    </div>
+
+                    <div class="close-code">返回</div>
+                </div>
+            </div>
+        </div>
+block customer-footer
+    script.
+        require(['prizeDetail'])

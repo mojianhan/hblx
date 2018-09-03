@@ -1,0 +1,104 @@
+$base = 1 / 750 * 100vw
+
+.prizeDetail-main-container
+    background #fff
+    height 100%
+    position relative
+    .head
+        height 156 * $base
+        background-color #ff4b0a
+        text-align center
+        color #fff
+        overflow hidden
+        position relative
+        .prize-name
+            font-size 36 * $base
+            margin-top 36 * $base
+        .close
+            position absolute
+            top 36 * $base
+            right 36 * $base
+            height 28 * $base
+            width 28 * $base
+            background url('../images/game/close2.png') no-repeat
+            background-size 100% 100%
+    
+    .prize-ticket-info-container
+        border-bottom 1px solid #dedfe0
+        padding-bottom 30 * $base
+        .ticket-head
+            height 102 * $base
+            line-height 102 * $base
+            margin 0 30 * $base
+            font-size 30 * $base
+            color #333
+            border-bottom 1px solid #dedfe0
+        .ticket-info
+            padding-left 30 * $base
+            color #ae9a90
+            p
+                span 
+                    &:first-child
+                        display inline-block
+                        width 150 * $base
+    .exchange-now
+        position absolute
+        bottom 0
+        left 0
+        height 100 * $base
+        line-height 100 * $base
+        text-align center
+        width 100%
+        color #fff
+        background-color #ff4b0a
+        font-size 30 *$base
+
+    .exchange-code-container
+        position absolute
+        top 0 
+        right 0
+        bottom 0
+        left 0
+        background-color rgba(0, 0, 0, .8)
+        .exchange-code-info
+            background-color #fff
+            margin 200 * $base 80 * $base 0 80 * $base
+            border-radius 20 * $base
+            .exchange-code-head
+                height 90 * $base
+                line-height 90 * $base
+                margin 0 30 * $base
+                border-bottom 1px solid #dedfe0
+                font-size 30 * $base
+                color #333
+                display flex
+                justify-content space-between
+                align-items center
+                .close-exchange-code
+                    display block
+                    height 55 * $base
+                    width 55 * $base
+                    background url('../images/game/close_48_icon.png') no-repeat
+                    background-size 100% 100%
+            .code-container
+                margin-top 50 * $base
+                text-align center
+                .code-num
+                    font-size 50 * $base
+                    color #333
+                p
+                    color #808080
+                    font-size 26 * $base
+                .exchange-code
+                    display block
+                    height 240 * $base
+                    width 240 * $base
+                    margin 0 auto
+            .close-code
+                height 96 * $base
+                line-height 96 * $base
+                text-align center
+                color #5c80ff
+                font-size 34 * $base
+                border-top 1px solid #dedfe0
+                margin-top 30 * $base

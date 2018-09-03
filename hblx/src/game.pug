@@ -1,0 +1,117 @@
+extends template/layout
+
+block customer-title
+  - var title = '红包来袭'
+block customer-meta
+  link(href="./stylesheets/game.css" rel="stylesheet")
+
+block customer-content
+
+    <div class="main-container">
+        <div class="head">
+            <div class="user-info">
+                <img class="user-img" src="" alt="">
+                <p class="score">
+                    <span id="score">0</span>
+                </p>
+            </div>
+
+            <div class="time">
+                <span>时间 :</span>
+                <span class="game-time"></span>
+            </div>
+
+            <div class="music">
+                <audio class="audio-music" id="audio-msc" src="./audio/audio2.mp3" ></audio>
+            </div>
+        </div>
+        <!-- 物品降落区域 -->
+        <div class="body-bg" id="body-bg">
+            <!-- <span class="money"></span>
+            <span class="money-db"></span>
+            <span class="bomb"></span> -->
+        </div>
+
+        <!-- 人物 -->
+        <div class="puppet get-score" id="puppet"></div>
+
+        <!-- game over -->
+        <div class="game-over-alert-container hidden">
+            <div class="game-over-alert-list-container">
+                <div class="game-over-uls-container">
+                    <p>
+                        <span>您当前挑战成绩为:</span>
+                        <span class="score-alert"></span>
+                    </p>
+                    <p class="failed-reason hidden"></p>
+                    <p>
+                        <span>您的最佳成绩为:</span>
+                        <span class="best-score"></span>
+                    </p>
+                    <p class="score-ranking-list-container">
+                        <span>排行榜:</span>
+                        <span class="score-ranking-list"></span>
+                    </p>
+                    <p>
+                        <span class="reminder-msg">您还有次游戏机会</span>
+                    </p>
+                </div>
+            </div>
+
+            <a href="#" class="follow to-prize hidden">赶紧去领奖</a>
+
+            <div class="game-over-alert-footer">
+                <a href="#" class="follow again-game">再玩一次</a>
+                <!-- <a href="#" class="follow "  data-id='follow-us'>关注我们</a> -->
+            </div>
+            <a href="#" class="to-index">返回首页</a>
+        </div>
+
+        <!-- 提示 -->
+        <div class="error-alert-container hidden">
+            <p class="alert-header">提示</p>
+            <div class="error-list-container">
+                <p class="alert-close error-alert-top-close" data-id="error-alert-container"></p>
+                <div class="error-alert-uls-container">
+                    <div class="error-status hidden" data-status="1">
+                        <p>活动尚未开始</p>
+                        <p>
+                            <span>开始时间:</span>
+                            <span class="start-time"></span>
+                        </p>
+                    </div>
+                    <div class="error-status hidden" data-status="2">
+                        <p>活动已经结束</p>
+                        <p>
+                            <span>结束时间:</span>
+                            <span class="end-time"></span>
+                        </p>
+                    </div>
+                    <p class="error-status hidden" data-status="3">您的游戏机会已用完。快去分享给好友获得更多游戏机会吧！</p>
+                    <p class="error-status hidden" data-status="4">您的今日的游戏次数已用完。</p>
+                    <p class="error-status hidden" data-status="5">您的游戏次数已用完。</p>
+                </div>
+            </div>
+
+
+            <div class="error-alert-footer">
+                <a href="#" class="follow error-alert-close hidden" data-id='follow-us'>关注我们</a>
+                <a href="#" class="follow confim-msg" data-id='error-alert-container'>返回首页</a>
+                <a href="#" class="follow hidden" id="share-btn" data-id='error-alert-container'>分享给好友</a>
+            </div>
+        </div>
+
+        <!-- 二维码 -->
+        <div class="qr-code-container hidden">
+          <img src="./images/qrcode.jpg" class="qr-code-img" alt="">
+        </div>
+
+        <!-- 分享 -->
+        <div class="share-container hidden">
+          <img src="./images/game/button_zhidaole.png" alt="">
+        </div>
+    </div>
+
+block customer-footer
+  script.
+    require(['game'])
